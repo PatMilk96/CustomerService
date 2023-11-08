@@ -12,11 +12,12 @@ public class CustomerService {
         orders.add(customerDetails);
     }
 
-    public CustomerDetails findById(int id) {
-        for(CustomerDetails order : orders){
-            if(order.getCustomerId() == id) {
+    public CustomerDetails findById(int customerId) {
+        for (CustomerDetails order : orders) {
+            if (order.getCustomerId() == customerId) {
                 return order;
             }
         }
         return null;
+    }
 }
